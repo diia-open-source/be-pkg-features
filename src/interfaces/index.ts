@@ -1,6 +1,8 @@
 import { Context } from 'unleash-client'
 
-import { PlatformType } from '@diia-inhouse/types'
+import { PlatformType, ProfileFeature, SessionType } from '@diia-inhouse/types'
+
+export { FeatureInterface } from 'unleash-client/lib/feature'
 
 export interface FeatureConfig {
     isEnabled: boolean
@@ -14,9 +16,18 @@ export interface FeatureContext extends Context {
      * But at the same time base64 representation of it is 88 chars long which is fine.
      */
     userIdBase64?: string
+
     platformType?: PlatformType
+
     /** semver major(.minor)(.patch) */
     platformVersion?: string
+
     /** semver major.minor.patch(.build) */
     appVersion?: string
+
+    mobileUid?: string
+
+    sessionType?: SessionType
+
+    profileFeature?: ProfileFeature
 }

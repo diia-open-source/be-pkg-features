@@ -8,7 +8,6 @@ import { LogLevel, PlatformType } from '@diia-inhouse/types'
 import { FeatureService } from '../../src/index'
 
 // The test case for the development purposes
-// eslint-disable-next-line jest/no-disabled-tests
 describe.skip('class: `FeatureService`', () => {
     const logger = new DiiaLogger()
     const url = ''
