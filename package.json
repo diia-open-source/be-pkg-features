@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/features",
-    "version": "2.7.11",
+    "version": "2.7.12",
     "description": "Features toggles",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
@@ -43,7 +43,7 @@
         "@diia-inhouse/errors": "1.18.10",
         "@diia-inhouse/eslint-config": "8.8.0",
         "@diia-inhouse/test": "7.3.11",
-        "@diia-inhouse/types": "11.7.0",
+        "@diia-inhouse/types": "12.0.0",
         "@types/node": "25.3.3",
         "@types/semver": "7.7.1",
         "@vitest/coverage-v8": "4.0.18",
