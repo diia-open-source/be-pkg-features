@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/features",
-    "version": "2.7.33",
+    "version": "2.7.34",
     "description": "Features toggles",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
@@ -38,8 +38,8 @@
     "devDependencies": {
         "@commitlint/cli": "20.4.3",
         "@diia-inhouse/configs": "6.1.1",
-        "@diia-inhouse/diia-logger": "3.20.4",
-        "@diia-inhouse/env": "2.8.18",
+        "@diia-inhouse/diia-logger": "3.20.6",
+        "@diia-inhouse/env": "2.8.20",
         "@diia-inhouse/errors": "1.18.19",
         "@diia-inhouse/eslint-config": "8.8.0",
         "@diia-inhouse/test": "7.3.18",
