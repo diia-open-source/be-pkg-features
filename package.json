@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/features",
-    "version": "2.7.35",
+    "version": "2.7.36",
     "description": "Features toggles",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
