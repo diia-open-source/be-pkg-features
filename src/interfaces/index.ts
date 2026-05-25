@@ -2,7 +2,7 @@ import { Context } from 'unleash-client'
 
 import { PlatformType, ProfileFeature, SessionType } from '@diia-inhouse/types'
 
-export { FeatureInterface } from 'unleash-client/lib/feature'
+export type { FeatureInterface } from 'unleash-client/lib/feature.js'
 
 export interface FeatureConfig {
     isEnabled: boolean

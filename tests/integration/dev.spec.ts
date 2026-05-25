@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { AsyncLocalStorage } from 'node:async_hooks'
 
-import DiiaLogger from '@diia-inhouse/diia-logger'
+import { DiiaLogger } from '@diia-inhouse/diia-logger'
 import { EnvService } from '@diia-inhouse/env'
 import { LogLevel, PlatformType } from '@diia-inhouse/types'
 

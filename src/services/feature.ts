@@ -2,12 +2,12 @@ import { AsyncLocalStorage } from 'node:async_hooks'
 
 import semver from 'semver'
 import { Unleash, startUnleash } from 'unleash-client'
-import { FeatureInterface } from 'unleash-client/lib/feature'
+import { FeatureInterface } from 'unleash-client/lib/feature.js'
 
 import type { EnvService } from '@diia-inhouse/env'
 import { AlsData, Logger, OnInit } from '@diia-inhouse/types'
 
-import { FeatureConfig, FeatureContext } from '../interfaces'
+import { FeatureConfig, FeatureContext } from '../interfaces/index.js'
 
 export class FeatureService implements OnInit {
     private unleash: Unleash | null = null
@@ -110,7 +110,7 @@ export class FeatureService implements OnInit {
         }
 
         if (parts.length === 4) {
-            return parts.slice(0, 3).join('.') + `-${parts[3]}`
+            return `${parts.slice(0, 3).join('.')}-${parts[3]}`
         }
 
         this.logger.warn('Invalid app version format for feature flag', { appVersion })

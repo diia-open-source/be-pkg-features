@@ -25,7 +25,7 @@ describe('class: `FeatureService`', () => {
             )
             const startUnleashSpy = vi
                 .spyOn(UnleashClient, 'startUnleash')
-                .mockResolvedValueOnce({ on: vi.fn() } as unknown as UnleashClient.Unleash)
+                .mockResolvedValueOnce({ on: vi.fn<() => void>() } as unknown as UnleashClient.Unleash)
 
             // Act
             await enabledFeatureService.onInit()
@@ -46,7 +46,7 @@ describe('class: `FeatureService`', () => {
             )
             const startUnleashSpy = vi
                 .spyOn(UnleashClient, 'startUnleash')
-                .mockResolvedValueOnce({ on: vi.fn() } as unknown as UnleashClient.Unleash)
+                .mockResolvedValueOnce({ on: vi.fn<() => void>() } as unknown as UnleashClient.Unleash)
 
             // Act
             await disabledFeatureService.onInit()
@@ -82,10 +82,10 @@ describe('class: `FeatureService`', () => {
                 mock<EnvService>(),
                 new AsyncLocalStorage(),
             )
-            const isEnabledSpy = vi.fn()
+            const isEnabledSpy = vi.fn<() => boolean>()
 
             vi.spyOn(UnleashClient, 'startUnleash').mockResolvedValueOnce({
-                on: vi.fn(),
+                on: vi.fn<() => void>(),
                 isEnabled: isEnabledSpy,
             } as unknown as UnleashClient.Unleash)
             await enabledFeatureService.onInit()
@@ -117,10 +117,12 @@ describe('class: `FeatureService`', () => {
             const name = 'test_name'
             const alsStore = new AsyncLocalStorage<AlsData>()
             const enabledFeatureService = new FeatureService('ServiceName', enabledUnleashConfig, logger, mock<EnvService>(), alsStore)
-            const isEnabledSpy = vi.fn().mockReturnValueOnce(true).mockReturnValueOnce(true).mockReturnValueOnce(false)
+            const isEnabledSpy = vi.fn<() => boolean>()
+
+            isEnabledSpy.mockReturnValueOnce(true).mockReturnValueOnce(true).mockReturnValueOnce(false)
 
             vi.spyOn(UnleashClient, 'startUnleash').mockResolvedValueOnce({
-                on: vi.fn(),
+                on: vi.fn<() => void>(),
                 isEnabled: isEnabledSpy,
             } as unknown as UnleashClient.Unleash)
             await enabledFeatureService.onInit()
@@ -139,11 +141,11 @@ describe('class: `FeatureService`', () => {
 
     describe('method: `isSomeEnabled`', () => {
         const featureService = new FeatureService('ServiceName', enabledUnleashConfig, logger, mock<EnvService>(), new AsyncLocalStorage())
-        const isEnabledSpy = vi.fn()
+        const isEnabledSpy = vi.fn<() => boolean>()
 
         beforeAll(async () => {
             vi.spyOn(UnleashClient, 'startUnleash').mockResolvedValueOnce({
-                on: vi.fn(),
+                on: vi.fn<() => void>(),
                 isEnabled: isEnabledSpy,
             } as unknown as UnleashClient.Unleash)
             await featureService.onInit()
@@ -166,11 +168,11 @@ describe('class: `FeatureService`', () => {
 
     describe('method: `getDefinition`', () => {
         const featureService = new FeatureService('ServiceName', enabledUnleashConfig, logger, mock<EnvService>(), new AsyncLocalStorage())
-        const getFeatureToggleDefinitionSpy = vi.fn()
+        const getFeatureToggleDefinitionSpy = vi.fn<() => unknown>()
 
         beforeAll(async () => {
             vi.spyOn(UnleashClient, 'startUnleash').mockResolvedValueOnce({
-                on: vi.fn(),
+                on: vi.fn<() => void>(),
                 getFeatureToggleDefinition: getFeatureToggleDefinitionSpy,
             } as unknown as UnleashClient.Unleash)
             await featureService.onInit()
