@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/features",
-    "version": "3.2.111",
+    "version": "3.2.112",
     "type": "module",
     "description": "Features toggles",
     "main": "dist/index.js",
@@ -46,7 +46,7 @@
     "devDependencies": {
         "@commitlint/cli": "20.4.3",
         "@diia-inhouse/configs": "7.2.1",
-        "@diia-inhouse/diia-logger": "4.4.69",
+        "@diia-inhouse/diia-logger": "4.4.70",
         "@diia-inhouse/env": "3.3.62",
         "@diia-inhouse/errors": "2.2.31",
         "@diia-inhouse/oxc-config": "2.1.6",
