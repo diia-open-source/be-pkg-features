@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/features",
-    "version": "3.2.142",
+    "version": "3.2.143",
     "type": "module",
     "description": "Features toggles",
     "main": "dist/index.js",
@@ -50,7 +50,7 @@
         "@diia-inhouse/env": "3.3.78",
         "@diia-inhouse/errors": "2.3.16",
         "@diia-inhouse/oxc-config": "3.2.0",
-        "@diia-inhouse/test": "8.3.34",
+        "@diia-inhouse/test": "8.3.35",
         "@diia-inhouse/types": "14.5.1",
         "@types/node": "25.6.2",
         "@types/semver": "7.7.1",
