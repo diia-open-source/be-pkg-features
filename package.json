@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/features",
-    "version": "3.2.153",
+    "version": "3.2.155",
     "description": "Features toggles",
     "license": "SEE LICENSE IN LICENSE.md",
     "author": "diia-team",
@@ -39,8 +39,8 @@
     "devDependencies": {
         "@commitlint/cli": "20.4.3",
         "@diia-inhouse/configs": "7.2.2",
-        "@diia-inhouse/diia-logger": "4.7.14",
-        "@diia-inhouse/env": "3.3.86",
+        "@diia-inhouse/diia-logger": "4.7.17",
+        "@diia-inhouse/env": "3.3.87",
         "@diia-inhouse/errors": "2.3.23",
         "@diia-inhouse/oxc-config": "4.0.3",
         "@diia-inhouse/test": "8.3.39",
