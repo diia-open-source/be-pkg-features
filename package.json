@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/features",
-    "version": "3.2.170",
+    "version": "3.2.171",
     "description": "Features toggles",
     "license": "SEE LICENSE IN LICENSE.md",
     "author": "diia-team",
@@ -29,8 +29,7 @@
         "prepare": "npm run build",
         "test": "vitest run",
         "test:watch": "vitest watch",
-        "test:coverage": "npm run test --selectProjects unit --coverage",
-        "find-circulars": "madge --circular --extensions ts ./"
+        "test:coverage": "npm run test --selectProjects unit --coverage"
     },
     "dependencies": {
         "semver": "7.7.4",
@@ -42,7 +41,7 @@
         "@diia-inhouse/diia-logger": "4.7.28",
         "@diia-inhouse/env": "3.3.92",
         "@diia-inhouse/errors": "2.3.28",
-        "@diia-inhouse/oxc-config": "5.0.2",
+        "@diia-inhouse/oxc-config": "6.1.1",
         "@diia-inhouse/test": "8.3.44",
         "@diia-inhouse/types": "14.9.1",
         "@types/node": "25.6.2",
@@ -50,7 +49,6 @@
         "@vitest/coverage-v8": "4.1.11",
         "@vitest/ui": "4.1.11",
         "lockfile-lint": "5.0.0",
-        "madge": "8.0.0",
         "oxfmt": "0.72.0",
         "oxlint": "1.87.0",
         "oxlint-tsgolint": "7.0.2003",
@@ -76,8 +74,5 @@
     },
     "engines": {
         "node": ">=24"
-    },
-    "madge": {
-        "tsConfig": "./tsconfig.json"
     }
 }
