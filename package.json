@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/features",
-    "version": "3.2.194",
+    "version": "3.3.0",
     "description": "Features toggles",
     "license": "SEE LICENSE IN LICENSE.md",
     "author": "diia-team",
@@ -41,9 +41,11 @@
         "@diia-inhouse/diia-logger": "4.7.49",
         "@diia-inhouse/env": "3.3.110",
         "@diia-inhouse/errors": "2.3.42",
+        "@diia-inhouse/i18n": "3.6.0",
         "@diia-inhouse/oxc-config": "6.1.3",
         "@diia-inhouse/test": "8.4.8",
         "@diia-inhouse/types": "14.12.3",
+        "@diia-inhouse/validators": "2.2.137",
         "@types/node": "25.6.2",
         "@types/semver": "7.7.1",
         "@vitest/coverage-v8": "4.1.11",
@@ -61,7 +63,14 @@
     },
     "peerDependencies": {
         "@diia-inhouse/env": ">=3.0.0",
-        "@diia-inhouse/types": ">=13.1.0"
+        "@diia-inhouse/i18n": ">=3.6.0",
+        "@diia-inhouse/types": ">=13.1.0",
+        "@diia-inhouse/validators": ">=2.0.0"
+    },
+    "peerDependenciesMeta": {
+        "@diia-inhouse/i18n": {
+            "optional": true
+        }
     },
     "commitlint": {
         "extends": "@diia-inhouse/configs/dist/commitlint"

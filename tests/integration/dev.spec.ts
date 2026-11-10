@@ -4,6 +4,7 @@ import { AsyncLocalStorage } from 'node:async_hooks'
 import { DiiaLogger } from '@diia-inhouse/diia-logger'
 import { EnvService } from '@diia-inhouse/env'
 import { LogLevel, PlatformType } from '@diia-inhouse/types'
+import { AppValidator } from '@diia-inhouse/validators'
 
 import { FeatureService } from '../../src/index'
 
@@ -20,6 +21,7 @@ describe.skip('class: `FeatureService`', () => {
             new DiiaLogger({ logLevel: LogLevel.DEBUG }),
             new EnvService(logger),
             new AsyncLocalStorage(),
+            new AppValidator(),
         )
 
         await expect(featureService.onInit()).resolves.not.toThrow()

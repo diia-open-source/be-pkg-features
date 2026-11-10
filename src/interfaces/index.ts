@@ -1,6 +1,7 @@
 import { Context } from 'unleash-client'
 
-import { PlatformType, ProfileFeature, SessionType } from '@diia-inhouse/types'
+import { Language, PlatformType, ProfileFeature, SessionType } from '@diia-inhouse/types'
+import type { ValidationRule } from '@diia-inhouse/validators'
 
 export type { FeatureInterface } from 'unleash-client/lib/feature.js'
 
@@ -30,4 +31,21 @@ export interface FeatureContext extends Context {
     sessionType?: SessionType
 
     profileFeature?: ProfileFeature
+}
+
+export interface FeatureVariant<TPayload = unknown> {
+    isEnabled: boolean
+    name?: string
+    payload?: TPayload
+}
+
+export interface GetVariantOptions {
+    payloadSchema?: ValidationRule
+    context?: FeatureContext
+}
+
+export interface GetLocalizedVariantOptions<TField extends string> {
+    fields: readonly TField[]
+    context?: FeatureContext
+    language?: Language
 }
